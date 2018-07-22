@@ -13,13 +13,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { ClothingComponent } from './clothing/clothing.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'clothing', component: ClothingComponent },
+  { path: 'catalog', component: CatalogComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -32,9 +32,10 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ClothingComponent,
+    CatalogComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule, 
