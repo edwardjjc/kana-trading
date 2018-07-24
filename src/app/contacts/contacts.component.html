@@ -1,38 +1,43 @@
-<div class="mt-5">
-  <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Email</th>
-          <th scope="col">Telefono</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let contacto of contactos | async, index as i">
-          <th scope="row">{{i+1}}</th>
-          <td>{{contacto.Nombre}}</td>
-          <td>{{contacto.Email}}</td>
-          <td>{{contacto.Telefono}}</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
-<div class="mt-5">
-    <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <mat-card *ngFor="let contacto of contactos | async">
+        <mat-card-title>{{contacto.Posicion}}</mat-card-title>
+        <mat-card-subtitle>{{contacto.Nombre}}</mat-card-subtitle>
+        <mat-card-content>{{contacto.Telefono}}</mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="example-container"> 
+            <mat-form-field appearance="outline">
+              <mat-label required>Nombre Completo</mat-label>
+              <input matInput placeholder="Nombre" required>
+              <mat-icon matSuffix>work_outline</mat-icon>
+            </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label required>Email</mat-label>
+            <input matInput placeholder="Email" required>
+            <mat-icon matSuffix>work_outline</mat-icon>
+            <mat-hint>Complete email</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label required>Phone</mat-label>
+            <input matInput placeholder="Phone" required>
+            <mat-icon matSuffix>work_outline</mat-icon>
+            <mat-hint>Complete email</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label required>Comentario</mat-label>
+            <textarea matInput placeholder="Comentario"></textarea>
+          </mat-form-field>
+            
+          <button mat-button onClick="enviarComentario()">Submit</button>
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+    </div>
+  </div>
 </div>
