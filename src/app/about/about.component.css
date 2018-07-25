@@ -1,0 +1,21 @@
+.container {
+    height: 800px;
+    margin-bottom: 25px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 50px; 
+    padding: 5px 15px 20px;
+  }
+
+.article {
+    color: #1b2130;
+    font-family: 'Comfortaa';
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  #map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }  

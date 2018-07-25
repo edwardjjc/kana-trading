@@ -17,6 +17,13 @@ import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { CatalogComponent } from './catalog/catalog.component';
 
+//Services
+import { ConectionService } from './services/conection.service';
+
+//Material Components
+import { MaterialModule } from './material-module';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'catalog', component: CatalogComponent },
@@ -39,13 +46,17 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule, 
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [],
+  providers: [ 
+    ConectionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
