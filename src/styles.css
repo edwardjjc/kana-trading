@@ -57,6 +57,15 @@ body {
 	text-transform: uppercase;
 	width: 270px;
 }
+#header .section .logo a img {
+	display: block;
+	height: 130px;
+	line-height: 130px;
+	margin: 0;
+	padding: 0 0 0 45px;
+	align-items:center;
+	width: 220px;
+}
 #header .section ul {
 	display: inline-block;
 	float: right;
